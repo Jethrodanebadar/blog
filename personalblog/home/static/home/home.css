@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css?family=Cormorant%20SC:700|Cormorant%20SC:400');
+
+body{
+    padding:0px;
+    margin: 0px;
+    font-family: 'Cormorant SC';
+    font-weight: 700;
+    background-color: #F4FDEB;
+}
+
+h1{
+    font-size: 3rem;
+}
+
+.main-page{
+    display: flex;
+     justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width:100%;
+  } 
+  
+.blogs{
+    display: flex;
+    flex-wrap: wrap;
+    max-width:97%;
+    gap: 2rem;
+    
+}
+
+.blogs ul{
+    gap: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.post_content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.post_content img{
+    border: 1px solid #0c0d0aa6;
+    border-radius: 10px;
+    max-width:80%;
+    height: auto;
+    transition: transform 0.3s ease;
+    max-height:20%;
+}
+
+.post_content img:hover {
+    transform: scale(1.1); 
+    transition-duration: .6s; 
+  }
+
+.post{
+    background-color:#ABBEAE;
+    padding: 2rem;
+    border: 1px solid #0c0d0aa6;
+    border-radius: 20px;
+    max-width: 25%;
+}

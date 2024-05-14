@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Home{% endblock title %}Home
+{% block style  %}
+<link rel="stylesheet" href="{% static "home/home.css" %}">{% endblock style  %}
+{% block content %}
+<section class="main-page">
+    <h1>Welcome to my Blog</h1>
+
+    <div class="blogs">
+    <ul >
+        {% for post in posts  %}
+        {% include "home/include/post.html" %}
+        {% endfor %}      
+    </ul>
+    </div>
+      </section>
+
+{% endblock content %}
+

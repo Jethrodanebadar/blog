@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css?family=Cormorant%20SC:700|Cormorant%20SC:400');
+
+body{
+    padding:0px;
+    margin: 0px;
+}
+
+header{
+    display:flex;
+    justify-content: space-between;
+    padding: 2rem 5rem;
+    background-color: #839272;
+    align-items: center;
+}
+.icon{
+    text-decoration: none;
+    font-size: 2rem;
+    font-family: 'Cormorant SC';
+  font-weight: 600;
+}
+a{
+    color: #0C0D0A;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+.links{
+    text-decoration: none;
+    display: flex;
+    gap:2rem;
+    
+}
+
+a:hover{
+    color: #ABBEAE;
+}

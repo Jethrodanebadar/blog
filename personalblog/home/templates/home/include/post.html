@@ -1,0 +1,11 @@
+{% load static %}
+
+   
+        <article class="post"> 
+            <a href="{% url "post-page" "story"%}">
+              <div class="post_content">
+                <img clas="images" src="{% static "home/assets/"|add:post.image %}">
+              <h3>{{post.title}}</h3>
+              </div>
+            </a>
+            </article>
