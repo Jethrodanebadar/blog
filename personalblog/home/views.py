@@ -9,7 +9,7 @@ list_posts = [
         "author": "Jethro",
         "date": date.today(),
         "content": """
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa quae velit inventore vitae, cupiditate reprehenderit minus earum eveniet necessitatibus ducimus 
+        1sdasaLorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa quae velit inventore vitae, cupiditate reprehenderit minus earum eveniet necessitatibus ducimus 
         minima quos laborum dolor vero labore exercitationem, architecto facere adipisci.
 
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa quae velit inventore vitae, cupiditate reprehenderit minus earum eveniet necessitatibus ducimus minima 
@@ -25,7 +25,7 @@ list_posts = [
         "author": "Joanna",
         "date": date.today(),
         "content": """
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa quae velit inventore vitae, cupiditate reprehenderit minus earum eveniet necessitatibus ducimus 
+        2dqwLorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa quae velit inventore vitae, cupiditate reprehenderit minus earum eveniet necessitatibus ducimus 
         minima quos laborum dolor vero labore exercitationem, architecto facere adipisci.
 
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa quae velit inventore vitae, cupiditate reprehenderit minus earum eveniet necessitatibus ducimus minima 
@@ -41,7 +41,7 @@ list_posts = [
         "author": "Jethro",
         "date": date.today(),
         "content": """
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa quae velit inventore vitae, cupiditate reprehenderit minus earum eveniet necessitatibus ducimus 
+        3dsqqwLorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa quae velit inventore vitae, cupiditate reprehenderit minus earum eveniet necessitatibus ducimus 
         minima quos laborum dolor vero labore exercitationem, architecto facere adipisci.
 
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa quae velit inventore vitae, cupiditate reprehenderit minus earum eveniet necessitatibus ducimus minima 
@@ -64,4 +64,7 @@ def home(request):
     })
 
 def post(request, slug):  
-    return render(request, "home/post-page.html")
+    blog_post = next(post for post in list_posts if post["slug"]== slug )
+    return render(request, "home/post-page.html", {
+        "post": blog_post
+    })

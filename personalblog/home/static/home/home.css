@@ -55,7 +55,7 @@ h1{
 .post_content img{
     border: 1px solid #0c0d0aa6;
     border-radius: 10px;
-  max-width: 80%;
+    max-width: 60%;
     transition: transform 0.3s ease;
     object-fit: cover;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -75,6 +75,7 @@ h1{
     padding: 1rem;
     border: 1px solid #0c0d0aa6;
     border-radius: 20px;
+    min-width: 50%;
     max-width: 25%;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 }

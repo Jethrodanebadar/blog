@@ -13,6 +13,7 @@ header{
     align-items: center;
 }
 .icon{
+    text-shadow: 1px 3px 7px #0C0D0A;
     text-decoration: none;
     font-size: 2rem;
     font-family: 'Cormorant SC';

@@ -1,29 +1,23 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block title %}The title of the post{% endblock title %}
+{% block title %}{{post.slug}}{% endblock title %}
 
 {% block style %}
 <link rel="stylesheet" href="{% static "home/post-page.css" %}">
 {% endblock style %}
 {% block content %}
 <section id="summary">
-    <h1 class="title">Title</h1>
+    <h1 class="title">{{post.title}}</h1>
     <article class="page-information">
-      <address>By Jethro</address>
+      <address>By {{post.author}}</address>
       <div>
-        Last Updated on <time>May 14th</time>
+        Last Viewed on <time>{{post.date}}</time>
       </div>
       
       <main>
         <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa quae velit inventore vitae, cupiditate reprehenderit minus earum eveniet necessitatibus ducimus minima quos laborum dolor vero labore exercitationem, architecto facere adipisci.
-        </p>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa quae velit inventore vitae, cupiditate reprehenderit minus earum eveniet necessitatibus ducimus minima quos laborum dolor vero labore exercitationem, architecto facere adipisci.
-        </p><p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa quae velit inventore vitae, cupiditate reprehenderit minus earum eveniet necessitatibus ducimus minima quos laborum dolor vero labore exercitationem, architecto facere adipisci.
-        </p>
+          {{post.content}}
       </main>
     </article>
   </section>
