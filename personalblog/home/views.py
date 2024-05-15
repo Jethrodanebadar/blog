@@ -22,7 +22,7 @@ list_posts = [
          "slug":"programming",
         "title": "programming is fun?",
         "image": "programming.jpg",
-        "author": "Jethro",
+        "author": "Joanna",
         "date": date.today(),
         "content": """
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa quae velit inventore vitae, cupiditate reprehenderit minus earum eveniet necessitatibus ducimus 
