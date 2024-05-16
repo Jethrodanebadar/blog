@@ -11,9 +11,10 @@ header{
     padding: 2rem 5rem;
     background-color: #839272;
     align-items: center;
+    flex-wrap: wrap;
 }
 .icon{
-    text-shadow: 1px 3px 7px #0C0D0A;
+    text-shadow: 1px 2px 4px #0c0d0a91;
     text-decoration: none;
     font-size: 2rem;
     font-family: 'Cormorant SC';
@@ -29,6 +30,7 @@ a{
     text-decoration: none;
     display: flex;
     gap:2rem;
+    flex-wrap: wrap;
     
 }
 

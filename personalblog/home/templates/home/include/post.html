@@ -2,10 +2,14 @@
 
    
         <article class="post"> 
-            <a href="{% url "post-page" post.slug%}">
+          <a href="{% url 'post-page' blog.pk %}">
               <div class="post_content">
-                <img clas="images" src="{% static "home/assets/"|add:post.image %}">
-              <h3 class="post-title">{{post.title}}</h3>
+                <img class="images" src="{{blog.image }}">
+              <h3 class="post-title">{{blog.title}}</h3>
+             
               </div>
+              <p class="author">By {{blog.author}}</p>
             </a>
             </article>
+
+            {% comment %} {% url 'post-page'%} {% endcomment %}

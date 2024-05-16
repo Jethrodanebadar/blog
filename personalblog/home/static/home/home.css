@@ -10,6 +10,7 @@ body{
 
 h1{
     font-size: 3rem;
+    text-shadow: 1px 1px 3px #0c0d0a59;
 }
 
 .main-page{
@@ -75,7 +76,14 @@ h1{
     padding: 1rem;
     border: 1px solid #0c0d0aa6;
     border-radius: 20px;
-    min-width: 50%;
-    max-width: 25%;
+    max-width: 15%;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+
+}
+
+.author{
+    font-size: .8rem;
+    color: rgba(29, 29, 29, 0.562);
+    text-align: left;
+    max-width: 100%;
 }

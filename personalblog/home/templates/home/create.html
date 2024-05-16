@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'home/create.css'%}">
+{% endblock style %}
+
+
+{% block content %}
+<h1>Create your Blog</h1>
+<div class="form-main">
+<form  method='POST'>
+    {% csrf_token %}
+    {{ form }}
+
+    <div class="buttons">
+        <button type="submit">Save</button>
+        <button href="/home/">Cancel</a></button>
+    </div>
+    
+</form>
+</div>
+{% endblock content %}
+
+

@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
-{% block title %}Home{% endblock title %}Home
+{% block title %}Home{% endblock title %}
 {% block style  %}
 <link rel="stylesheet" href="{% static "home/home.css" %}">{% endblock style  %}
 {% block content %}
@@ -9,7 +9,7 @@
 
     <div class="blogs">
     <ul >
-        {% for post in posts  %}
+        {% for blog in blogs  %}
         {% include "home/include/post.html" %}
         {% endfor %}      
     </ul>

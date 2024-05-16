@@ -1,24 +1,31 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block title %}{{post.slug}}{% endblock title %}
+{% block title %}{{post.title}}{% endblock title %}
 
 {% block style %}
 <link rel="stylesheet" href="{% static "home/post-page.css" %}">
 {% endblock style %}
 {% block content %}
-<section id="summary">
-    <h1 class="title">{{post.title}}</h1>
-    <article class="page-information">
-      <address>By {{post.author}}</address>
-      <div>
-        Last Viewed on <time>{{post.date}}</time>
-      </div>
-      
-      <main>
-        <p>
-          {{post.content}}
-      </main>
-    </article>
-  </section>
+  {% comment %} {% for post in posts %} {% endcomment %}
+  <div class="buttons">
+    <button class="update-button" href="{%url 'blog-update' pk=post.pk%}" type="button">Edit</button>
+    <button class="update-button" id="deletebutton" href="{%url 'blog-update' pk=post.pk%}" type="button">Delete</button>
+  </div>
+  <section id="summary">
+
+      <h1 class="title">{{post.title}}</h1>
+      <article class="page-information">
+        <address>By {{post.author}}</address>
+        <div>
+          Last Viewed on <time>{{post.created}} UTC</time>
+        </div>
+        
+        <main>
+          <p>
+            {{post.content}}
+        </main>
+      </article>
+    </section>
+  {% comment %} {% endfor %} {% endcomment %}
 {% endblock content %}

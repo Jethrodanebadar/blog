@@ -6,5 +6,5 @@ class blog_data(models.Model):
     author = models.CharField(max_length=100)
     created = models.DateTimeField(auto_now_add=True)
     content = models.TextField()
-    image = models.ImageField()
+    image = models.ImageField(null=True, blank=True)
     

@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css?family=Cormorant%20SC:700|Cormorant%20SC:400');
+
+body{
+    padding:0px;
+    margin: 0px;
+    font-family: 'Cormorant SC';
+    font-weight: 700;
+    background-color: #F4FDEB;
+    height: 100vh;
+}
+
+h1{
+    text-align: center;
+    /* background-color: aquamarine   ; */
+    margin: 2rem auto;
+}
+
+.form-main{
+    
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+/* background-color: aqua; */
+}
+
+.form-main form{
+    border: 1px solid rgba(0, 0, 0, 0.452);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2rem;
+    /* background-color: bisque; */
+    gap: 5rem;
+    width: 80%;
+}
+
+.content-form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+background-color: rgb(0, 44, 44);
+padding: 2rem;
+gap: 5rem;
+}
+
+textarea, input{
+    margin-top: 1rem;
+    border: transparent;
+    min-height: 2rem;
+    border-radius: 5px;
+    background-color: #e4e4e4;
+    width: 100%;
+}
+
+label{
+    font-size: 2rem;
+    text-align: center;
+}
+
+.form-main li{
+    font-size: 1rem;
+    list-style-type:none;
+    color: rgb(223, 8, 8);
+}
+
+.buttons{
+    display: flex;
+    gap: 1rem;
+}
+
+button{
+    border: white;
+    border-radius: 10px;
+    padding: 0.2em 1em;
+}
