@@ -6,11 +6,11 @@
 {% block style %}
 <link rel="stylesheet" href="{% static "home/post-page.css" %}">
 {% endblock style %}
-{% block content %}
-  {% comment %} {% for post in posts %} {% endcomment %}
+{% block content %}  
   <div class="buttons">
-    <button class="update-button" href="{%url 'blog-update' pk=post.pk%}" type="button">Edit</button>
-    <button class="update-button" id="deletebutton" href="{%url 'blog-update' pk=post.pk%}" type="button">Delete</button>
+    <button id="editbutton" onclick="window.location.href='{% url 'blog-update' pk=post.pk %}'" type="button">Edit</button>
+
+    <button  id="deletebutton" onclick="window.location.href='{% url 'blog-delete' pk=post.pk %}'" type="button">Delete</button>
   </div>
   <section id="summary">
 
@@ -18,7 +18,7 @@
       <article class="page-information">
         <address>By {{post.author}}</address>
         <div>
-          Last Viewed on <time>{{post.created}} UTC</time>
+          Created at <time>{{post.created}} UTC</time>
         </div>
         
         <main>
@@ -27,5 +27,4 @@
         </main>
       </article>
     </section>
-  {% comment %} {% endfor %} {% endcomment %}
 {% endblock content %}

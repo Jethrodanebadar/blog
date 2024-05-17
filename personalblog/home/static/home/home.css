@@ -1,44 +1,43 @@
-@import url('https://fonts.googleapis.com/css?family=Cormorant%20SC:700|Cormorant%20SC:400');
-
-body{
-    padding:0px;
-    margin: 0px;
+body {
+    padding: 0;
+    margin: 0;
     font-family: 'Cormorant SC';
     font-weight: 700;
     background-color: #F4FDEB;
 }
 
-h1{
+h1 {
     font-size: 3rem;
     text-shadow: 1px 1px 3px #0c0d0a59;
 }
 
-.main-page{
+.main-page {
     display: flex;
-     justify-content: center;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
-    width:100%;
-  } 
-  
-.blogs{
-    display: flex;
-    flex-wrap: wrap;
-    max-width:97%;
-    gap: 2rem;
-    
+    width: 100%;
 }
 
-.blogs ul{
+.blogs {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 97%;
+    gap: 2rem;
+}
+
+.blogs ul {
     gap: 2.5rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
+li {
+    text-shadow: 1px 1px 3px #0c0d0a59;
+}
 
-.post_content{
-    /* background-color:aliceblue ; */
+.post_content {
     display: flex;
     flex-direction: column;
     padding: 1rem;
@@ -47,13 +46,13 @@ h1{
     align-items: center;
 }
 
-.post-title{
+.post-title {
     text-align: center;
     font-size: 1.5rem;
+    
 }
 
-
-.post_content img{
+.post_content img {
     border: 1px solid #0c0d0aa6;
     border-radius: 10px;
     max-width: 60%;
@@ -63,27 +62,28 @@ h1{
 }
 
 .post_content img:hover {
-    transform: scale(1.1); 
-    transition-duration: .6s; 
-  }
+    transform: scale(1.1);
+    transition-duration: .6s;
+}
 
-.post{
+.post {
+    position: relative; /* Add this line */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color:#ABBEAE;
+    background-color: #ABBEAE;
     padding: 1rem;
     border: 1px solid #0c0d0aa6;
     border-radius: 20px;
-    max-width: 15%;
+    max-width: 25%;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-
 }
 
-.author{
-    font-size: .8rem;
+.author {
+    position: absolute; 
+    bottom: 10px; 
+    left: 20px; 
+    font-size: 0.8rem;
     color: rgba(29, 29, 29, 0.562);
-    text-align: left;
-    max-width: 100%;
 }

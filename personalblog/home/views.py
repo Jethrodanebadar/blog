@@ -1,9 +1,12 @@
 from django.shortcuts import render
 from django.views.generic import CreateView, UpdateView
+from django.views.generic.edit import  DeleteView
 from .models import blog_data
 from django.core.exceptions import ViewDoesNotExist
 from django.http.response import HttpResponse
 from .forms import Blogform
+
+
 def Homeview(request):
     list_posts = blog_data.objects.all()
     return render(request, "home/home.html", {
@@ -34,3 +37,13 @@ class Updateblog(UpdateView):
     form_class = Blogform
     template_name = "home/create.html"
     success_url = '/home/'
+    
+class Deleteblog(DeleteView):
+    model = blog_data
+    success_url = '/home/'
+    template_name = 'home/delete.html'
+    
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['post'] = self.get_object()
+        return context

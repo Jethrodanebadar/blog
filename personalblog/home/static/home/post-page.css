@@ -14,7 +14,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    flex-wrap: wrap;
     background-color: #ABBEAE;
     min-height: 100vh;
 }
@@ -22,6 +22,7 @@ body{
 .title{
     text-align: center;
     font-size: 3rem;
+    max-width: 70%;
 }
 
 .page-information{
@@ -54,9 +55,22 @@ p{
     padding: .5em 2em;
     border-radius: 10px;
     border:1px solid rgba(0, 0, 0, 0.445);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
 }
 
 #deletebutton{
     color: rgb(228, 227, 227);
-    background-color: rgb(255, 0, 0);
+    background-color: #d11a2a;
+    transition: transform 0.3s ease;
+}
+
+#editbutton{
+    color: rgb(228, 227, 227);
+    background-color:  #839272;
+    transition: transform 0.3s ease;
+}
+
+#deletebutton:hover, #editbutton:hover{
+    transform: scale(1.1); 
+    transition-duration: .6s; 
 }

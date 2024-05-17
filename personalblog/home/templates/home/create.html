@@ -10,13 +10,13 @@
 {% block content %}
 <h1>Create your Blog</h1>
 <div class="form-main">
-<form  method='POST'>
+<form  method='POST' enctype="multipart/form-data">
     {% csrf_token %}
-    {{ form }}
+    {{ form}}
 
     <div class="buttons">
-        <button type="submit">Save</button>
-        <button href="/home/">Cancel</a></button>
+        <button id="Confirm-button" type="submit">Save</button>
+        <button id="Cancel-button" type="button" onclick="window.location.href=/home/">Cancel</a></button>
     </div>
     
 </form>

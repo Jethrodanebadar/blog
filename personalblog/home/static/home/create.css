@@ -32,6 +32,7 @@ h1{
     flex-direction: column;
     padding: 2rem;
     /* background-color: bisque; */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     gap: 5rem;
     width: 80%;
 }
@@ -49,10 +50,14 @@ gap: 5rem;
 textarea, input{
     margin-top: 1rem;
     border: transparent;
-    min-height: 2rem;
+    min-height: 2em;
     border-radius: 5px;
     background-color: #e4e4e4;
     width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    resize: vertical; 
+    max-height: none;
+    overflow-y: auto; 
 }
 
 label{
@@ -63,7 +68,7 @@ label{
 .form-main li{
     font-size: 1rem;
     list-style-type:none;
-    color: rgb(223, 8, 8);
+    color: #d11a2a;
 }
 
 .buttons{
@@ -72,7 +77,31 @@ label{
 }
 
 button{
-    border: white;
     border-radius: 10px;
     padding: 0.2em 1em;
+    border: 1px solid rgba(0, 0, 0, 0.404);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.image-div{
+    display: flex;
+    flex-direction:column ;
+    background-color: aquamarine;
+}
+
+#Cancel-button{
+    color: rgb(228, 227, 227);
+    background-color: #d11a2a;
+    transition: transform 0.3s ease;
+}
+
+#Confirm-button{
+    color: rgb(228, 227, 227);
+    background-color:  #839272;
+    transition: transform 0.3s ease;
+}
+
+#Cancel-button:hover, #Confirm-button:hover{
+    transform: scale(1.1); 
+    transition-duration: .6s; 
 }

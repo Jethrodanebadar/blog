@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block style %}
+
+<link rel="stylesheet" href="{%static 'home/delete.css'%}">
+{% endblock style %}
+
+
+{% block content %}
+<div class="delete-form">
+<form method='POST'>{% csrf_token %}
+    <img src="{% static 'home/assets/warning.png' %}">
+    <p>Are you sure you want to delete "{{post.title}}"?</p>
+    <p>This action can't be undone</p>
+    <div class= buttons>
+    <button id="Confirm-button" type="submit" value="Confirm">Confirm</button>
+    <button id="Delete-button" type="button" onclick="window.location.href=/home/">Cancel</a></button>
+    </div>
+</div>
+{% endblock content %}
+

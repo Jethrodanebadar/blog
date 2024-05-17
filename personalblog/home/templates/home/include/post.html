@@ -4,12 +4,17 @@
         <article class="post"> 
           <a href="{% url 'post-page' blog.pk %}">
               <div class="post_content">
-                <img class="images" src="{{blog.image }}">
+                {% if blog.image %}
+                <img class="images" src="{{blog.image.url}}" alt = "blogcover">
+                {% else %}
+                <img class="images" src="{% static 'home/assets/placeholder.png' %}">
+                {% endif %}
+                
               <h3 class="post-title">{{blog.title}}</h3>
              
               </div>
               <p class="author">By {{blog.author}}</p>
             </a>
+          
             </article>
-
-            {% comment %} {% url 'post-page'%} {% endcomment %}
+            
